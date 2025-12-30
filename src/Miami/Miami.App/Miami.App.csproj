@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Miami.Components.Menu\Miami.Components.Menu.csproj" />
+    <ProjectReference Include="..\Miami.Pages.Chatbot\Miami.Pages.Chatbot.csproj" />
     <ProjectReference Include="..\Miami.Pages.One\Miami.Pages.One.csproj" />
     <ProjectReference Include="..\Miami.Pages.Three\Miami.Pages.Three.csproj" />
     <ProjectReference Include="..\Miami.Pages.Two\Miami.Pages.Two.csproj" />

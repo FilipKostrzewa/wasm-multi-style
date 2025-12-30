@@ -11,6 +11,7 @@ public partial class App
         typeof(Miami.Pages.One.PageOne).Assembly,
         typeof(Miami.Pages.Two.PageTwo).Assembly,
         typeof(Miami.Pages.Three.PageThree).Assembly,
+        typeof(Miami.Pages.Chatbot.Chatbot).Assembly,
     };
 
 }
