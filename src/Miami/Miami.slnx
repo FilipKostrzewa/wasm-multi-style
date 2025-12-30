@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="Miami.App/Miami.App.csproj" />
+  <Project Path="Miami.Pages.One/Miami.Pages.One.csproj" />
+  <Project Path="Miami.Pages.Three/Miami.Pages.Three.csproj" />
+  <Project Path="Miami.Pages.Two/Miami.Pages.Two.csproj" />
 </Solution>
