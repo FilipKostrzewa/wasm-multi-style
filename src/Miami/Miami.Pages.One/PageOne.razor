@@ -1,3 +1,190 @@
 @page "/page-one"
 
-<h1>Page ONE</h1>
+
+<PageTitle>Tailwind CSS Examples</PageTitle>
+
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold text-gray-900">Tailwind CSS Examples</h1>
+            <p class="mt-2 text-lg text-gray-600">Explore beautiful components styled with Tailwind CSS</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Cards Grid -->
+        <div class="px-4 py-6 sm:px-0">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Card Components</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Beautiful Card</h3>
+                        <p class="text-gray-600 mb-4">This card uses Tailwind's gradient backgrounds and smooth transitions.</p>
+                        <button class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded transition-colors duration-200">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-blue-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Responsive Design</h3>
+                        <p class="text-gray-600 mb-4">Tailwind makes responsive design simple with intuitive breakpoint prefixes.</p>
+                        <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors duration-200">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Utility First</h3>
+                        <p class="text-gray-600 mb-4">Build complex components from simple utility classes.</p>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded transition-colors duration-200">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alert Components -->
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Alert Components</h2>
+            <div class="space-y-4 mb-12">
+                <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-4 rounded" role="alert">
+                    <p class="font-bold">Info Alert</p>
+                    <p>This is an informational message using Tailwind CSS.</p>
+                </div>
+                <div class="bg-green-50 border-l-4 border-green-500 text-green-700 p-4 rounded" role="alert">
+                    <p class="font-bold">Success Alert</p>
+                    <p>Your action was completed successfully!</p>
+                </div>
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded" role="alert">
+                    <p class="font-bold">Warning Alert</p>
+                    <p>Please review this important information.</p>
+                </div>
+                <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 rounded" role="alert">
+                    <p class="font-bold">Error Alert</p>
+                    <p>Something went wrong. Please try again.</p>
+                </div>
+            </div>
+
+            <!-- Buttons Showcase -->
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Button Styles</h2>
+            <div class="flex flex-wrap gap-4 mb-12">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded">
+                    Primary
+                </button>
+                <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded">
+                    Secondary
+                </button>
+                <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded">
+                    Success
+                </button>
+                <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded">
+                    Danger
+                </button>
+                <button class="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-bold py-2 px-6 rounded transition-colors duration-200">
+                    Outline
+                </button>
+                <button class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-6 rounded">
+                    Gradient
+                </button>
+            </div>
+
+            <!-- Form Example -->
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Form Elements</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-12">
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                            Username
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               id="username" 
+                               type="text" 
+                               placeholder="Enter your username">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                            Email
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               id="email" 
+                               type="email" 
+                               placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                            Message
+                        </label>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                  id="message" 
+                                  rows="4" 
+                                  placeholder="Your message here..."></textarea>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="mr-2 leading-tight" type="checkbox" id="terms">
+                        <label class="text-sm text-gray-700" for="terms">
+                            I agree to the terms and conditions
+                        </label>
+                    </div>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" 
+                            type="submit">
+                        Submit Form
+                    </button>
+                </form>
+            </div>
+
+            <!-- Badge Examples -->
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Badges</h2>
+            <div class="flex flex-wrap gap-3 mb-12">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                    Default
+                </span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                    Success
+                </span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                    Warning
+                </span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                    Error
+                </span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
+                    Info
+                </span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                    Neutral
+                </span>
+            </div>
+
+            <!-- Stats Section -->
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Statistics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-2">2.5K</div>
+                    <div class="text-gray-600">Downloads</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="text-4xl font-bold text-green-500 mb-2">98%</div>
+                    <div class="text-gray-600">Satisfaction</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="text-4xl font-bold text-purple-500 mb-2">150+</div>
+                    <div class="text-gray-600">Components</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="text-4xl font-bold text-orange-500 mb-2">24/7</div>
+                    <div class="text-gray-600">Support</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
