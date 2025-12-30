@@ -1,7 +1,343 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Miami Tech Solutions - Premier IT Company in Miami</PageTitle>
 
-<h1>Hello, world!</h1>
+<!-- Hero Section with Miami Beach Background -->
+<div class="relative min-h-screen">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/90 via-blue-500/80 to-purple-600/90"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?q=80&w=2070')] bg-cover bg-center bg-fixed opacity-40"></div>
+    </div>
 
-Welcome to your new app.
+    <!-- Hero Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-4">
+        <div class="max-w-5xl mx-auto text-center space-y-8 py-20">
+            <!-- Palm Tree Icons -->
+            <div class="flex justify-center space-x-8 text-6xl mb-8 animate-pulse">
+                <span>🌴</span>
+                <span>☀️</span>
+                <span>🌴</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl">
+                Miami Tech Solutions
+            </h1>
+            <p class="text-2xl md:text-3xl font-light mb-8 drop-shadow-lg">
+                Where Innovation Meets the Sunshine State
+            </p>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+                Leading IT company in Miami, delivering cutting-edge technology solutions 
+                for web development, artificial intelligence, and smart home automation.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-12">
+                <button @onclick="ScrollToServices" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                    Explore Our Services
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                    Contact Us
+                </button>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<section class="py-20 bg-gradient-to-b from-gray-50 to-white" @ref="servicesSection">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Who We Are</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mb-8"></div>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Based in the vibrant heart of Miami, we're a forward-thinking IT company 
+                dedicated to transforming businesses through innovative technology solutions. 
+                Our team of experts combines technical excellence with creative problem-solving 
+                to deliver exceptional results.
+            </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+            <div class="text-center">
+                <div class="text-4xl font-bold text-cyan-600 mb-2">500+</div>
+                <div class="text-gray-600">Projects Delivered</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">200+</div>
+                <div class="text-gray-600">Happy Clients</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-purple-600 mb-2">50+</div>
+                <div class="text-gray-600">Team Members</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-pink-600 mb-2">10+</div>
+                <div class="text-gray-600">Years Experience</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Carousel -->
+<section class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mb-8"></div>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive technology solutions tailored to your business needs
+            </p>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="relative max-w-5xl mx-auto">
+            <!-- Carousel Items -->
+            <div class="overflow-hidden rounded-2xl shadow-2xl">
+                @if (currentSlide == 0)
+                {
+                    <!-- Web Development Slide -->
+                    <div class="bg-gradient-to-br from-blue-500 to-cyan-600 p-8 md:p-12 animate-fadeIn">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="text-white space-y-6">
+                                <div class="text-6xl mb-4">💻</div>
+                                <h3 class="text-3xl md:text-4xl font-bold">Web Development</h3>
+                                <p class="text-lg leading-relaxed text-blue-50">
+                                    Create stunning, responsive websites and web applications that drive your business forward. 
+                                    We specialize in modern frameworks like Blazor, React, and Angular to deliver 
+                                    high-performance solutions.
+                                </p>
+                                <ul class="space-y-3 text-blue-50">
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Custom Web Applications
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        E-commerce Solutions
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Progressive Web Apps (PWA)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        API Development & Integration
+                                    </li>
+                                </ul>
+                                <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300 shadow-lg">
+                                    Learn More
+                                </button>
+                            </div>
+                            <div class="hidden md:block">
+                                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800" 
+                                         alt="Web Development" 
+                                         class="rounded-lg shadow-2xl w-full h-64 object-cover" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (currentSlide == 1)
+                {
+                    <!-- AI Solutions Slide -->
+                    <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-8 md:p-12 animate-fadeIn">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="text-white space-y-6">
+                                <div class="text-6xl mb-4">🤖</div>
+                                <h3 class="text-3xl md:text-4xl font-bold">AI Solutions</h3>
+                                <p class="text-lg leading-relaxed text-purple-50">
+                                    Harness the power of artificial intelligence to automate processes, gain insights, 
+                                    and stay ahead of the competition. Our AI solutions transform how you do business.
+                                </p>
+                                <ul class="space-y-3 text-purple-50">
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Machine Learning Models
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Natural Language Processing
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Computer Vision Systems
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Predictive Analytics
+                                    </li>
+                                </ul>
+                                <button class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-50 transition-colors duration-300 shadow-lg">
+                                    Learn More
+                                </button>
+                            </div>
+                            <div class="hidden md:block">
+                                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800" 
+                                         alt="AI Solutions" 
+                                         class="rounded-lg shadow-2xl w-full h-64 object-cover" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (currentSlide == 2)
+                {
+                    <!-- Smart Home Systems Slide -->
+                    <div class="bg-gradient-to-br from-green-500 to-teal-600 p-8 md:p-12 animate-fadeIn">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="text-white space-y-6">
+                                <div class="text-6xl mb-4">🏠</div>
+                                <h3 class="text-3xl md:text-4xl font-bold">Smart Home Systems</h3>
+                                <p class="text-lg leading-relaxed text-green-50">
+                                    Transform your home into an intelligent living space with our cutting-edge smart home 
+                                    automation systems. Security cameras, lighting, climate control, and more at your fingertips.
+                                </p>
+                                <ul class="space-y-3 text-green-50">
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Security Camera Systems
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Smart Lighting & Climate Control
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Voice-Activated Controls
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Energy Management Solutions
+                                    </li>
+                                </ul>
+                                <button class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition-colors duration-300 shadow-lg">
+                                    Learn More
+                                </button>
+                            </div>
+                            <div class="hidden md:block">
+                                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800" 
+                                         alt="Smart Home" 
+                                         class="rounded-lg shadow-2xl w-full h-64 object-cover" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Carousel Navigation -->
+            <div class="flex justify-between items-center mt-8">
+                <button @onclick="PreviousSlide" 
+                        class="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 text-gray-700 hover:text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+
+                <!-- Carousel Indicators -->
+                <div class="flex space-x-3">
+                    @for (int i = 0; i < 3; i++)
+                    {
+                        int index = i;
+                        <button @onclick="() => GoToSlide(index)" 
+                                class="@(currentSlide == index ? "w-12 bg-gradient-to-r from-cyan-500 to-blue-600" : "w-3 bg-gray-300") h-3 rounded-full transition-all duration-300 hover:bg-blue-400">
+                        </button>
+                    }
+                </div>
+
+                <button @onclick="NextSlide" 
+                        class="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 text-gray-700 hover:text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600">
+    <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+        </h2>
+        <p class="text-xl text-white/90 mb-8">
+            Let's discuss how our technology solutions can help you achieve your goals
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                Get Started Today
+            </button>
+            <button class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                Schedule a Consultation
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="flex justify-center space-x-4 text-4xl mb-6">
+            <span>🌴</span>
+            <span>🏖️</span>
+            <span>🌴</span>
+        </div>
+        <p class="text-xl mb-4">Miami Tech Solutions</p>
+        <p class="text-gray-400">Innovating from the Heart of Miami Beach</p>
+        <p class="text-gray-500 mt-6">© 2024 Miami Tech Solutions. All rights reserved.</p>
+    </div>
+</footer>
+
+<style>
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fadeIn {
+        animation: fadeIn 0.5s ease-out;
+    }
+</style>

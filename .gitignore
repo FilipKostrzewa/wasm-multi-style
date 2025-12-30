@@ -3,7 +3,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-README.md
+*README.md
 TROUBLESHOOTING.md
 
 # User-specific files
